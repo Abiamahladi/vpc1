@@ -4,15 +4,35 @@ module "vpc" {
   vpc_cidr        = var.vpc_cidr
   public_subnets  = var.public_subnets
   private_subnets = var.private_subnets
-  azs         = var.azs
-  
+  azs             = var.azs
+
 }
 
 
 
 
+# Create the S3 bucket for Terraform state
+#resource "aws_s3_bucket" "terraform_state" {
+ # bucket = "tfstate-storage-bucket-ladi" # Must be globally unique
 
+  # Prevent accidental deletion
+ # lifecycle {
+#    prevent_destroy = true
+ # }
+#}
 
+#resource "aws_s3_bucket_versioning" "terraform_state" {
+ # bucket = aws_s3_bucket.terraform_state.id
+  #versioning_configuration {
+   # status = "Enabled"
+  #}
+#}
 
-
-
+#resource "aws_s3_bucket_server_side_encryption_configuration" "terraform_state" {
+ # bucket = aws_s3_bucket.terraform_state.id
+  #rule {
+   # apply_server_side_encryption_by_default {
+     # sse_algorithm = "AES256"
+   # }
+ # }
+#}

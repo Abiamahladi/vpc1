@@ -1,0 +1,16 @@
+# Create the S3 bucket for Terraform state
+#resource "aws_s3_bucket" "terraform_state" {
+ # bucket = "tfstate-storage-bucket-ladi" # Must be globally unique
+
+  # Prevent accidental deletion
+ # lifecycle {
+#    prevent_destroy = true
+ # }
+#}
+
+#resource "aws_s3_bucket_versioning" "terraform_state" {
+ # bucket = aws_s3_bucket.terraform_state.id
+  #versioning_configuration {
+   # status = "Enabled"
+  #}
+#}

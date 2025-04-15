@@ -17,3 +17,14 @@ variable "azs" {
   description = "A list of availability zones in the region"
   type        = list(string)
 }
+
+variable "aws_region" {
+  description = "Declear aws region"
+  default     = "us-east-1"
+  type        = string
+}
+
+
+variable "aws_profile" {
+  default = "abiam" # Match the profile name you configured
+}
