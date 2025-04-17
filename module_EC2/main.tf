@@ -5,6 +5,8 @@ resource "aws_instance" "public_subnet_1" {
   ami           = "ami-00a929b66ed6e0de6"  # Replace with your AMI ID
   instance_type = "t2.micro"
   subnet_id     = var.public_subnet_1_id  # Referencing the subnet ID variable
+  associate_public_ip_address = true  # Ensures that the instance gets a public IP
+
 
   tags = {
     Name        = "ec2-public-subnet-1"
@@ -18,6 +20,8 @@ resource "aws_instance" "public_subnet_2" {
   ami           = "ami-00a929b66ed6e0de6"  # Replace with your AMI ID
   instance_type = "t2.micro"
   subnet_id     = var.public_subnet_2_id  # Referencing the subnet ID variable
+  associate_public_ip_address = true  # Ensures that the instance gets a public IP
+
 
   tags = {
     Name        = "ec2-public-subnet-2"
