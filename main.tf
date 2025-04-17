@@ -9,6 +9,15 @@ module "vpc" {
 }
 
 
+module "ec2" {
+  source = "./module_EC2"
+
+
+  public_subnet_1_id  = module.vpc.public_subnet_ids[0]
+  public_subnet_2_id  = module.vpc.public_subnet_ids[1]
+  private_subnet_1_id = module.vpc.private_subnet_ids[0]
+  private_subnet_2_id = module.vpc.private_subnet_ids[1]
+}
 
 
 # Create the S3 bucket for Terraform state
