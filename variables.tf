@@ -28,3 +28,10 @@ variable "aws_region" {
 variable "aws_profile" {
   default = "abiam" # Match the profile name you configured
 }
+
+variable "iam_instance_profile_name" {
+  description = "The name of the IAM instance profile to attach to the EC2 instances"
+  type        = string
+  default     = null # Optional: Set a default if needed
+}
+
