@@ -35,3 +35,10 @@ variable "iam_instance_profile_name" {
   default     = null # Optional: Set a default if needed
 }
 
+
+variable "vpc_id"{
+ 
+ description = "The ID of the VPC to use"
+  type        = string
+}
+

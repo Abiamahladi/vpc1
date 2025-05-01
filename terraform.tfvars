@@ -19,4 +19,7 @@ azs = [
 
 aws_region = "us-east-1"
 
+# terraform.tfvars
+vpc_id = "module.vpc.vpc_id"  # Forces Terraform to use the module output
+
 

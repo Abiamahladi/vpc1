@@ -1,5 +1,5 @@
 resource "aws_instance" "public_subnet_1" {
-  ami                         = "ami-00a929b66ed6e0de6"
+  ami                         = "ami-084568db4383264d4"
   instance_type               = "t2.micro"
   subnet_id                   = var.public_subnet_1_id
   associate_public_ip_address = true
@@ -13,7 +13,7 @@ resource "aws_instance" "public_subnet_1" {
 }
 
 resource "aws_instance" "public_subnet_2" {
-  ami                         = "ami-00a929b66ed6e0de6"
+  ami                         = "ami-084568db4383264d4"
   instance_type               = "t2.micro"
   subnet_id                   = var.public_subnet_1_id
   associate_public_ip_address = true
@@ -27,7 +27,7 @@ resource "aws_instance" "public_subnet_2" {
   }
 
   resource "aws_instance" "private_subnet_1" {
-  ami                         = "ami-00a929b66ed6e0de6"
+  ami                         = "ami-084568db4383264d4"
   instance_type               = "t2.micro"
   subnet_id                   = var.public_subnet_1_id
   associate_public_ip_address = true
@@ -42,7 +42,7 @@ resource "aws_instance" "public_subnet_2" {
 
   
   resource "aws_instance" "private_2_subnet_2" {
-  ami                         = "ami-00a929b66ed6e0de6"
+  ami                         = "ami-084568db4383264d4"
   instance_type               = "t2.micro"
   subnet_id                   = var.public_subnet_1_id
   associate_public_ip_address = true

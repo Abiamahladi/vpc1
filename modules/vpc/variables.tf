@@ -29,6 +29,13 @@ variable "enable_vpn_gateway" {
   default     = false
 }
 
+#variable "vpc_id" {
+ # type = string
+#}
+
+
+
+
 
 
 

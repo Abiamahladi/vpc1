@@ -30,6 +30,15 @@ module "ec2" {
   role_name = "EC2-ssm-role"
 }
 
+#module "security" {
+ # source = "./modules/security"
+  #vpc_id = var.vpc_id
+#}
+module "security" {
+  source = "./modules/security"
+  vpc_id = module.vpc.vpc_id  # Changed from var.vpc_id to module.vpc.vpc_id
+}
+
 
 
 

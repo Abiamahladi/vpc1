@@ -14,6 +14,12 @@ output "private_subnet_ids" {
   ]
 }
 
+output "vpc_id" {
+  description = "ID of the created VPC"
+  value       = aws_vpc.main.id  # Matches your VPC resource name
+}
+
+
 
 
 
